@@ -1,8 +1,9 @@
 #include <unistd.h>
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-	char i;
+	char	i;
+
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -23,4 +24,9 @@ void ft_putnbr(int nb)
 		i = nb + 48;
 		write(1, &i, 1);
 	}
+}
+
+int main(void)
+{
+	ft_putnbr(42);
 }
